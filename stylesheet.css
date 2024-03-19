@@ -1,0 +1,134 @@
+h1{
+    
+    font-family:"Medula One", "Impact", sans-serif;
+    letter-spacing: 0.1em; 
+    font-size: 900%;
+}
+
+h1:hover{
+    font-size: 1000%;
+    color: rgb(72, 114, 72);
+}
+
+.text {
+    font-family: "Medula One", "Impact", sans-serif;
+    text-align: center;
+}
+.img-container{
+    position: relative;
+    text-align: center;
+}
+.centered{
+    position: fixed;
+    top: 30%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.top-left{
+    position: fixed;
+    font: 350% "Medula One", "Arial", sans-serif;
+    top:10%;
+    left:10%;
+}
+
+.text_container{
+    width: 50%;
+    background-color: rgb(72, 114, 72);
+    color: #F6F0E1;
+    border: 5px rgb(17, 95, 42) dotted;
+    padding: 15px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.overlay-image{
+    margin: 10px;
+    padding: 10px;
+    border: 3px rgb(72, 114, 72) solid;
+    border-radius: 25px;
+    min-height: 800px;
+    background-image:url('../fotosDeFondo/holanda.JPG');
+    background-size:cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+
+/* testing flexbox design*/
+
+/* media query for responsive design: at 768px it changes to column layout (default)*/
+@media(min-width:768px){
+    .container-1{
+        display: flex;
+        /* align-items: flex-end; or flex-start, or center, makes boxes height depend on content */
+        /* flex-direction: column; */
+    }
+}
+
+
+
+.container-1 div{
+    border: 1px solid;
+    padding: 10px;
+}
+
+.box-1{
+    flex: 2;
+    order: 2;
+    /* use flex-basis to assign width */
+}
+
+.box-2{
+    flex: 1;
+    order: 1;
+}
+
+.box-3{
+    flex: 1;
+    order: 3;
+}
+
+/* testing grid design */
+
+.grid-container{
+    max-width: 800px;
+    margin: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*equal fraction units, static */
+    /* grid-template-columns: repeat(auto-fill, minmax(200, 1fr)); /* fills space, gives width range, dynamic*/
+    /* grid-template-rows: repeat(2, 1fr) 2fr; */
+    gap: 5px; /* can also specify column and row gap individually*/
+    /* grid-auto-rows: minmax(200px, auto); */
+
+    /* align-items: start; /* aligns with respect to tallest item */
+    /* justify-content: end; /*would work if the columns did not span the whole container (justifies with respect to container) */
+}
+
+.item{
+    background-color: pink;
+    border: 2px palevioletred solid;
+    color: #2f2f2f;
+    padding: 5px;
+    /* margin: 3px; */
+}
+
+.item:nth-of-type(2){ /* selects second of type .item*/
+    height: 30px;
+    width: 30px;
+    align-self: center; /* y axis*/
+    justify-self: center; /* x axis*/
+    /* aligns & justifies itself within its own available grid space (height) */
+}
+
+.item:nth-of-type(4){
+    background-color: orangered;
+    grid-column: 1 / 3; /* you can see grid column numbers w safarichrome inspect */
+    grid-row: 2 / span 2;
+}
+
+@media(max-width: 800px){ /* media query for responsive grid design*/
+    .grid-container{
+        grid-template-columns: 1fr 1fr; /* reduces number of columns to 2*/
+    }
+}
