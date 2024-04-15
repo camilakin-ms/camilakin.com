@@ -1,9 +1,19 @@
 .contact-box{
     background-color: #547754;
     padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     margin-left: 1%;
     margin-right: 1%;
     text-align: center;
     border-radius: 15px;
     max-height: 100vh;
+}
+
+.contact-box a{
+    color: #F6F0E1;
+}
+
+.contact-box a:hover{
+    color: #C35A39;
 }

@@ -140,7 +140,9 @@
 
   .image{
     /* border: 2px red solid; */
-    background-image: url("images/windmill.JPG");
+    background-image: url("images/windmillb&w.JPG");
+    opacity: 0.7;
+    z-index: -1;
     background-size: 100%;
     background-repeat: no-repeat;
     text-align: center;
