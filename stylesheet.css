@@ -167,14 +167,21 @@
     padding: 4%;
   }
 
-
-
   .small-bits{
     font-family: "Bona Nova", "Arial";
     font-size: 25px;
     color: #F6F0E1;
     line-height: 40px;
     display: inline;
+  }
+
+  .under-construction{
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: #547754;
+    text-align: center;
+    padding: 10%;
+    border-radius: 15px;
   }
 
  
